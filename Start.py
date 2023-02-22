@@ -145,18 +145,19 @@ if st.button("Подготовить расчёт"):
         if mosh1>0:
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)]
                              })
+        if mosh2>0:
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)],
                              "Участок 2":[round(uV2,2),round(uP2,2),round(uPE2,2)]
-                             })
+        if mosh3>0:          })
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)],
                              "Участок 2":[round(uV2,2),round(uP2,2),round(uPE2,2)],
                              "Участок 3":[round(uV3,2),round(uP3,2),round(uPE3,2)]
-                             })
+        if mosh4>0:          })
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)],
                              "Участок 2":[round(uV2,2),round(uP2,2),round(uPE2,2)],
                              "Участок 3":[round(uV3,2),round(uP3,2),round(uPE3,2)],
                              "Участок 4":[round(uV4,2),round(uP4,2),round(uPE4,2)]
-                             })
+        if mosh5>0:          })
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)],
                              "Участок 2":[round(uV2,2),round(uP2,2),round(uPE2,2)],
                              "Участок 3":[round(uV3,2),round(uP3,2),round(uPE3,2)],
@@ -167,4 +168,4 @@ if st.button("Подготовить расчёт"):
             df.index=["Падение напряжения на участке, В", "Падение напряжения на участке, %", "Суммарное падение напряжения, %"]
             st.write(df)
         else:
-            st.write("Данные не введены ✅") 
+            st.write("Данные не введены ❌") 
