@@ -20,7 +20,7 @@ tok1, tok2, tok3, tok4, tok5 = (0 for i in range(5))
 sin1, sin2, sin3, sin4, sin5 = (0 for i in range(5))
 uV1, uV2, uV3, uV4, uV5 = (0 for i in range(5))
 uP1, uP2, uP3, uP4, uP5 = (0 for i in range(5))
-uV1, uV2, uV3, uV4, uV5 = (0 for i in range(5))
+uPE1, uPE2, uPE3, uPE4, uPE5 = (0 for i in range(5))
 
 nap1 = st.selectbox("Напряжение участка 1", [0,400,230])
 nap2 = st.selectbox("Напряжение участка 2", [0,400,230])
@@ -141,7 +141,7 @@ if st.button("Подготовить расчёт"):
                 uV5=1*tok5*(r5*length5/sel_sech[4]*cos5+x5*length5*sin5)
             uP5=100*(uV5/230)
             uPE5=uP1+uP2+uP3+uP4+uP5
-        
+        st.write("Рассчитано ✅")
         if mosh1>0:
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)]
                              })
@@ -170,6 +170,35 @@ if st.button("Подготовить расчёт"):
         if mosh1>0:
             df.index=["Падение напряжения на участке, В", "Падение напряжения на участке, %", "Суммарное падение напряжения, %"]
             st.write(df)
-            st.write("Рассчитано ✅")
         else:
-            st.write("Данные не введены ❌") 
+            st.write("Данные не введены ❌")
+st.session_state["mosh1"]=mosh1
+st.session_state["mosh2"]=mosh2
+st.session_state["mosh3"]=mosh3
+st.session_state["mosh4"]=mosh4
+st.session_state["mosh5"]=mosh5
+st.session_state["uV1"]=uV1
+st.session_state["uV2"]=uV2
+st.session_state["uV3"]=uV3
+st.session_state["uV4"]=uV4
+st.session_state["uV5"]=uV5
+st.session_state["uP1"]=uP1
+st.session_state["uP2"]=uP2
+st.session_state["uP3"]=uP3
+st.session_state["uP4"]=uP4
+st.session_state["uP5"]=uP5
+st.session_state["uPE1"]=uPE1
+st.session_state["uPE2"]=uPE2
+st.session_state["uPE3"]=uPE3
+st.session_state["uPE4"]=uPE4
+st.session_state["uPE5"]=uPE5
+st.session_state["r1"]=r1
+st.session_state["r2"]=r2
+st.session_state["r3"]=r3
+st.session_state["r4"]=r4
+st.session_state["r5"]=r5
+st.session_state["x1"]=x1
+st.session_state["x2"]=x2
+st.session_state["x3"]=x3
+st.session_state["x4"]=x4
+st.session_state["x5"]=x5
