@@ -141,7 +141,7 @@ if st.button("Подготовить расчёт"):
                 uV5=1*tok5*(r5*length5/sel_sech[4]*cos5+x5*length5*sin5)
             uP5=100*(uV5/230)
             uPE5=uP1+uP2+uP3+uP4+uP5
-        st.write("Рассчитано ✅")
+        
         if mosh1>0:
             df=pd.DataFrame({"Участок 1":[round(uV1,2),round(uP1,2),round(uPE1,2)]
                              })
@@ -170,5 +170,6 @@ if st.button("Подготовить расчёт"):
         if mosh1>0:
             df.index=["Падение напряжения на участке, В", "Падение напряжения на участке, %", "Суммарное падение напряжения, %"]
             st.write(df)
+            st.write("Рассчитано ✅")
         else:
             st.write("Данные не введены ❌") 
