@@ -1,5 +1,11 @@
 import streamlit as st
 import pandas as pd
+hide_streamlit_style = """
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 st.title("Результаты расчёта падения напряжения")
 
 if st.session_state["mosh5"]>0:
