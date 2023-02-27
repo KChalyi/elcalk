@@ -36,7 +36,7 @@ if st.session_state["mosh5"]>0:
     st.image("images/uv.bmp")
     st.write("Падение напряжения на участке: " + str(round(st.session_state["uP4"],2))  + "%" + "┃По нижеследующей формуле ⬇")
     st.image("images/uvp.bmp")    
-    st.write("Суммарное падение напряжения:, %:", round(st.session_state["uPE4"],2))
+    st.write("Суммарное падение напряжения: " + str(round(st.session_state["uPE4"],2)) + "%")
     st.write("Расчёты для Участка 5:")
     st.write("Активное сопротивление: " + str(round(st.session_state["r5"],4))  + " Ом" +"┃Реактивное сопротивление: ",  str(st.session_state["x5"]) + " Ом")
     st.write("Падение напряжения на участке: " + str(round(st.session_state["uV5"],2))  + " В" + "┃По нижеследующей формуле ⬇")
@@ -72,7 +72,7 @@ elif st.session_state["mosh4"]>0:
     st.image("images/uv.bmp")
     st.write("Падение напряжения на участке: " + str(round(st.session_state["uP4"],2))  + "%" + "┃По нижеследующей формуле ⬇")
     st.image("images/uvp.bmp")    
-    st.write("Суммарное падение напряжения:, %:", round(st.session_state["uPE4"],2))
+    st.write("Суммарное падение напряжения: " + str(round(st.session_state["uPE4"],2)) + "%")
 elif st.session_state["mosh3"]>0:
     st.write("Расчёты для Участка 1:")
     st.write("Активное сопротивление: " + str(round(st.session_state["r1"],4))  + " Ом" +"┃Реактивное сопротивление: ",  str(st.session_state["x1"]) + " Ом")
