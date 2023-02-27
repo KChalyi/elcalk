@@ -10,7 +10,7 @@ st.title("Результаты расчёта падения напряжени�
 
 if st.session_state["mosh5"]>0:
     st.write("Исходные данные для Участка 1:")
-    st.write("Материал: " + str(round(st.session_state["mat1"],2)) + "Сечение: " + str(round(st.session_state["sech1"],2))  + " мм²" + "Мощность: " + str(round(st.session_state["mosh1"],2))  + " кВт" + "┃Длина: " + str(st.session_state["length1"]) + " м" + "┃cos φ: ", str(st.session_state["cos1"]))
+    st.write("Материал: " + st.session_state["mat1"] + "Сечение: " + str(st.session_state["sech1"])  + " мм²" + "Мощность: " + str(round(st.session_state["mosh1"],2))  + " кВт" + "┃Длина: " + str(st.session_state["length1"]) + " м" + "┃cos φ: ", str(st.session_state["cos1"]))
     st.write("Расчёты для Участка 1:")
     st.write("Активное сопротивление: " + str(round(st.session_state["r1"],4))  + " Ом" +"┃Реактивное сопротивление: ",  str(st.session_state["x1"]) + " Ом")
     st.write("Падение напряжения на участке: " + str(round(st.session_state["uV1"],2))  + " В" + "┃По нижеследующей формуле ⬇")
