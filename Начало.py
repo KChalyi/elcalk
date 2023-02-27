@@ -1,5 +1,11 @@
 import streamlit as st
 import pandas as pd
+hide_streamlit_style = """
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 mtr_str=["Медь","Алюминий","Медь","Алюминий","Медь","Алюминий","Медь","Алюминий","Медь","Алюминий"]
 st.title("Расчёт падения напряжения")
 sel_decks = st.multiselect("Материал жилы кабелей", mtr_str)
