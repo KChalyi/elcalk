@@ -95,7 +95,7 @@ if st.button("Подготовить расчёт"):
         if cos1>0:
             sin1=(1-cos1)**(0.5)
         if cos2>0:
-            sin12=(1-cos2)**(0.5)
+            sin2=(1-cos2)**(0.5)
         if cos3>0:
             sin3=(1-cos3)**(0.5)
         if cos4>0:
